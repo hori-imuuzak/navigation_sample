@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">navigation_sample</string>
+
+    <string-array name="products">
+        <item>チョコチップクッキー</item>
+        <item>グレープフルーツジュース</item>
+        <item>愛犬元気</item>
+        <item>烏龍茶</item>
+        <item>ニンテンドーSwitch</item>
+        <item>週刊少年ジャンプ</item>
+        <item>ファブリーズ</item>
+        <item>可燃ゴミ袋</item>
+        <item>じゃがりこ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_product_fragment"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="app.imuuzak.navigation_sample.ui.main.ListFragment"
+        android:label="商品一覧"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="app.imuuzak.navigation_sample.ui.main.DetailFragment"
+        android:label="商品"
+        tools:layout="@layout/detail_fragment">
+        <deepLink
+            app:uri="hogehoge.com/products/{name}"
+            />
+        <action
+            android:id="@+id/action_detailFragment_to_thankyouFragment"
+            app:destination="@id/thankyouFragment"
+            app:popUpTo="@id/listFragment" />
+        <argument
+            android:name="productName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/thankyouFragment"
+        android:name="app.imuuzak.navigation_sample.ui.main.ThankyouFragment"
+        android:label="ありがとうございました"
+        tools:layout="@layout/thankyou_fragment" />
+</navigation>
